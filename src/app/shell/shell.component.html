@@ -1,0 +1,22 @@
+<div class="mainWrap">
+  <header class="mainHeader">
+    <nav>
+      <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
+      <a [routerLink]="['/aboutUs']" routerLinkActive="active">About Us</a>
+      <a [routerLink]="['/services']" routerLinkActive="active">Services</a>
+      <a [routerLink]="['/orthodontics']" routerLinkActive="active"
+        >Orthodontics</a
+      >
+      <a [routerLink]="['/testimonials']" routerLinkActive="active"
+        >Testimonials</a
+      >
+      <a [routerLink]="['/gallery']" routerLinkActive="active">Gallery</a>
+      <a [routerLink]="['/blog']" routerLinkActive="active">Blog</a>
+      <a [routerLink]="['/contactUs']" routerLinkActive="active">Contact Us</a>
+    </nav>
+  </header>
+  <div id="bodyContainer">
+    <router-outlet></router-outlet>
+  </div>
+  <footer class="mainFooter">Footer Content</footer>
+</div>
