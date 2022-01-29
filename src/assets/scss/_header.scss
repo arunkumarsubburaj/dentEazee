@@ -1,0 +1,177 @@
+.mainHeader {
+  @media (max-width: 767px) {
+    position: relative;
+    background-color: #f7f7f7;
+  }
+  @media (min-width: 768px) {
+    background: linear-gradient(to right, #f7f7f7 30%, #fff 70%);
+  }
+  .contentWrap {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    @media (max-width: 767px) {
+      justify-content: center;
+      border-bottom: 1px solid #e6e6e6;
+    }
+    @media (min-width: 768px) {
+      padding: 0 20px;
+      height: 165px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.logo {
+  @media (max-width: 1023px) {
+    width: 200px;
+  }
+  @media (min-width: 1024px) {
+    width: 300px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 43%;
+    background: url("../images/logo-main.jpg") no-repeat;
+    background-size: 100%;
+  }
+}
+
+.bookAppoinment {
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  min-width: 200px;
+  height: 48px;
+  color: #fff;
+  background: linear-gradient(to right, #08a7e3, #37d6c0);
+  border-radius: 5px;
+  display: none;
+  @media (max-width: 767px) {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    display: inline-flex;
+  }
+}
+
+.hamburger {
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+  i {
+    width: 30px;
+    display: block;
+    height: 3px;
+    background: linear-gradient(to right, #08a7e3, #37d6c0);
+    &:nth-child(2) {
+      margin: 6px 0;
+    }
+  }
+}
+
+.mainNav {
+  @media (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  nav {
+    background: #fff;
+    display: flex;
+    @media (max-width: 767px) {
+      width: 280px;
+      height: 100%;
+      overflow: auto;
+      padding: 40px 12px 16px;
+      flex-direction: column;
+    }
+    @media (min-width: 768px) {
+      height: 54px;
+      justify-content: center;
+      border-top: 1px solid #e6e6e6;
+      border-bottom: 1px solid #e6e6e6;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
+  }
+  a {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: #313131;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      line-height: 44px;
+      padding-left: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+    @media (min-width: 768px) {
+      margin: 0 1.5vw;
+    }
+
+    &.active {
+      color: #07a7e3;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+      @media (max-width: 767px) {
+        &:before {
+          top: 8px;
+          bottom: 8px;
+          width: 4px;
+          background-image: linear-gradient(to bottom, #07a7e3, #37d6c0);
+        }
+      }
+      @media (min-width: 768px) {
+        &:before {
+          top: 0;
+          right: 0;
+          height: 4px;
+          background-image: linear-gradient(to right, #07a7e3, #37d6c0);
+        }
+      }
+    }
+  }
+  .closeMenu {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f5f5f5;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+/*
+
+@media (max-width: 1023px) {}
+  @media (min-width: 1024px) {}
+
+*/

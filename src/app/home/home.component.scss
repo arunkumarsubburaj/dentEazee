@@ -1,4 +1,244 @@
-#carouselWrapper {
-  width: 500px;
-  height: 400px;
+.welcome {
+  padding: 4.8rem 2rem 6rem;
+  text-align: center;
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+}
+
+.blockHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 12px;
+  margin-bottom: 3rem;
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #134290;
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #000;
+  }
+}
+
+.homeServices {
+  margin-bottom: 10rem;
+  ul {
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  li {
+    flex: 0 0 50%;
+    max-width: 26.6rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    cursor: pointer;
+
+    h3 {
+      color: #134290;
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    .serviceIcon {
+      color: #73b049;
+      font-size: 4.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .normalView {
+      height: 100%;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 1px solid #dedfe0;
+
+      span,
+      h3 {
+        transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      }
+
+      &:after {
+        @media (min-width: 1366px) {
+          content: "...";
+          font-size: 4rem;
+          line-height: 0.5;
+          margin-bottom: 1rem;
+          color: #d5d5d5;
+        }
+      }
+    }
+
+    .hoverView {
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      bottom: 0;
+      right: 1rem;
+      background: #134290;
+      color: #fff;
+      padding: 10px 14px;
+      display: none;
+      flex-direction: column;
+      pointer-events: none;
+      animation: scaleUp 0.25s ease 0.05s both;
+
+      h3 {
+        color: #fff;
+        text-align: left;
+        font-size: 1.8rem;
+        margin-bottom: 0.25em;
+        animation: dropDown 0.2s ease 0.28s both;
+      }
+
+      .desc {
+        font-size: 1.4rem;
+        max-height: 5.5em;
+        overflow: hidden;
+        animation: dropDown 0.2s ease 0.35s both;
+      }
+      @media (max-width: 1365px) {
+        display: none;
+      }
+    }
+
+    .readMore {
+      position: absolute;
+      bottom: 10px;
+      right: 14px;
+      font-size: 1.2rem;
+      animation: fadeLeft 0.2s ease 0.4s both;
+    }
+
+    &:hover {
+      .hoverView {
+        display: flex;
+      }
+      .normalView {
+        > span {
+          opacity: 0;
+          transform: translateX(-2rem);
+        }
+        h3 {
+          opacity: 0;
+          transform: translateX(2rem);
+        }
+      }
+    }
+  }
+}
+
+.testimonialWrap {
+  color: #fff;
+  background: #5d7d4e;
+  margin-bottom: 10rem;
+  .contentWrap {
+    padding: 2rem;
+    text-align: center;
+  }
+  h2,
+  h3 {
+    color: inherit;
+  }
+}
+
+.homeDoctors {
+  padding: 1rem 0 3rem;
+  background: linear-gradient(to bottom, #fff, #eee);
+
+  ul {
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    flex: 0 0 100%;
+    border: 1px solid #dedfe0;
+    background: #fff;
+    @media (max-width: 767px) {
+      margin-bottom: 1rem;
+      padding: 2rem 1.4rem;
+    }
+    @media (min-width: 768px) {
+      flex: 0 0 calc(50% - 2rem);
+      margin: 0 1rem;
+      padding: 3rem 2rem;
+    }
+    @media (min-width: 1366px) {
+      flex: 0 0 calc(50% - 4rem);
+      margin: 0 2rem;
+    }
+  }
+
+  figure {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: #eee;
+    margin: 0 auto 2rem;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+  .degree {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #5d7d4e;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes dropDown {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

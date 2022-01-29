@@ -1,0 +1,36 @@
+@import "header";
+@import "icomoon";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+  font-size: 7px;
+  @media (min-width: 360px) {
+    font-size: 8px;
+  }
+  @media (min-width: 768px) {
+    font-size: 9px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 10px;
+  }
+  @media (min-width: 1600px) {
+    font-size: 11px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #343434;
+}
+
+.contentWrap {
+  max-width: 1240px;
+  margin: 0 auto;
+}
