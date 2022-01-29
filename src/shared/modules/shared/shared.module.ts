@@ -4,6 +4,7 @@ import { LightboxModule } from 'ngx-lightbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 import { AgGridModule } from 'ag-grid-angular';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [],
@@ -13,12 +14,14 @@ import { AgGridModule } from 'ag-grid-angular';
     ReactiveFormsModule,
     FormsModule,
     AngularMultiSelectModule,
+    SwiperModule,
     AgGridModule.withComponents([]),
   ],
   exports: [
     LightboxModule,
     ReactiveFormsModule,
     FormsModule,
+    SwiperModule,
     AngularMultiSelectModule,
     AgGridModule,
   ],
