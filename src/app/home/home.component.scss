@@ -1,3 +1,8 @@
+.bannerSlider {
+  height: 400px;
+  background: teal;
+}
+
 .welcome {
   padding: 4.8rem 2rem 6rem;
   text-align: center;
@@ -143,26 +148,9 @@
   }
 }
 
-.testimonialWrap {
-  color: #fff;
-  background: #5d7d4e;
-  margin-bottom: 10rem;
-  .contentWrap {
-    padding: 2rem;
-    text-align: center;
-  }
-  h2,
-  h3 {
-    color: inherit;
-  }
-  #carouselWrapper {
-    width: 100%;
-    height: 400px;
-  }
-}
-
 .homeDoctors {
   padding: 1rem 0 3rem;
+  margin-bottom: 10rem;
   background: linear-gradient(to bottom, #fff, #eee);
 
   ul {
@@ -213,6 +201,106 @@
   p {
     font-size: 1.6rem;
     line-height: 1.6;
+  }
+}
+.readMoreBtn {
+  min-width: 15rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #5d7d4e;
+  background: linear-gradient(to bottom, #fff, #e1e1e1);
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.4rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+.testimonialWrap {
+  color: #fff;
+  background: #5d7d4e;
+  margin-bottom: 10rem;
+  .contentWrap {
+    padding: 2rem;
+    text-align: center;
+  }
+  h2,
+  h3 {
+    color: inherit;
+  }
+  .readMoreBtn {
+    margin-bottom: 2rem;
+  }
+}
+.testimonySlider {
+  height: 44rem;
+}
+
+.testimonyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  padding: 0 4rem;
+  @media (min-width: 768px) {
+    padding: 0 calc((50% - 150px) / 2);
+  }
+  figure {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: #ccc;
+    border: 4px solid #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1.6rem;
+  }
+  .desc {
+    margin-bottom: 1rem;
+  }
+  .username {
+    font-weight: 700;
+  }
+}
+
+.WhyUs {
+  margin-bottom: 10rem;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 1rem;
+    margin: 5rem 0;
+    li {
+      position: relative;
+      flex: 0 0 100%;
+      padding: 0 2rem 0 3.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+      &:before {
+        position: absolute;
+        top: 6px;
+        left: 1rem;
+        content: "\e909";
+        font-size: 1rem;
+        color: #ff7686;
+        font-family: "icomoon" !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      @media (min-width: 1024px) {
+        flex: 0 0 50%;
+      }
+    }
   }
 }
 

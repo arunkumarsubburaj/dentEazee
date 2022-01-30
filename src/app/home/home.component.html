@@ -1,10 +1,10 @@
-<!-- <div id="carouselWrapper">
+<div class="bannerSlider">
   <swiper class="mySwiper" [config]="config">
     <ng-template swiperSlide> Swipe Template 1 </ng-template>
     <ng-template swiperSlide> Swipe Template 2</ng-template>
     <ng-template swiperSlide> Swipe Template 3</ng-template>
   </swiper>
-</div> -->
+</div>
 
 <div class="contentWrap">
   <div class="welcome">
@@ -131,14 +131,33 @@
     <div class="blockHeading">
       <h2>Testimonials</h2>
       <h3>What our patients say about us</h3>
-      <div id="carouselWrapper">
-        <swiper class="mySwiper" [config]="config">
-          <ng-template swiperSlide> Swipe Template 1 </ng-template>
-          <ng-template swiperSlide> Swipe Template 2</ng-template>
-          <ng-template swiperSlide> Swipe Template 3</ng-template>
-        </swiper>
-      </div>
     </div>
+    <div class="testimonySlider">
+      <swiper class="mySwiper" [config]="config">
+        <ng-template swiperSlide>
+          <div class="testimonyItem">
+            <figure></figure>
+            <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, facere!</div>
+            <div class="username">- John Doe</div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="testimonyItem">
+            <figure></figure>
+            <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, facere!</div>
+            <div class="username">- John Doe</div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="testimonyItem">
+            <figure></figure>
+            <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, facere! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, facere!</div>
+            <div class="username">- John Doe</div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+    <a href="" class="readMoreBtn">View More</a>
   </div>
 </div>
 
@@ -183,6 +202,29 @@
           different dental needs.
         </p>
       </li>
+    </ul>
+  </div>
+</div>
+
+<div class="WhyUs">
+  <div class="contentWrap">
+    <div class="blockHeading">
+      <h2>Why Choose Us</h2>
+      <h3>Let Us Help You</h3>
+    </div>
+    <ul>
+      <li>Friendly & well-trained chair side assistants</li>
+      <li> Smile Designing</li>
+      <li> Digital analysis of the jaws and teeth</li>
+      <li> Diagnosis using the intraoral camera & Digital Photographs</li>
+      <li> Sterile & up-to-date equipments</li>
+      <li> We practice specialty dental care and quality treatment delivery</li>
+      <li> Customised treatment planning with all the specialists at a time </li>
+      <li> 24 hour / round the clock on-call emergency services </li>
+      <li> Home visits for patients with special care needs</li>
+      <li> Root canal fillings in one visit </li>
+      <li> Latest all ceramic with zirconium crowns & bridges </li>
+      <li>  Friendly & Well trained Dentists & Staff</li>
     </ul>
   </div>
 </div>

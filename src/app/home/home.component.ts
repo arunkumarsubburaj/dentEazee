@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
     navigation: true,
     centeredSlides: true,
     autoplay: { delay: 3000, disableOnInteraction: false },
-    pagination: { clickable: true },
     scrollbar: { draggable: true },
     loop: true,
   };
