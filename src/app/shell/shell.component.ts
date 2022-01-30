@@ -10,24 +10,11 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./shell.component.scss'],
 })
 export class ShellComponent implements OnInit, AfterViewInit {
-  isLoggedIn: boolean = false;
-  constructor(
-    private loginService: LoginService,
-    private router: Router,
-    private toastrService: ToastrService
-  ) {}
-  ngOnInit() {
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event: any) => {
-        this.isLoggedIn = this.loginService.isLoggedIn();
-      });
-  }
+  constructor(private router: Router, private toastrService: ToastrService) {}
+  isMenuOpen: boolean = false;
+  ngOnInit() {}
   ngAfterViewInit() {}
-  logout() {
-    this.loginService.logout();
-    this.router.navigateByUrl('/home');
-    this.isLoggedIn = false;
-    this.toastrService.success('Logout succesful!');
+  toggleSideMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
