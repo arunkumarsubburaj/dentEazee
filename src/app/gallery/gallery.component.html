@@ -1,4 +1,14 @@
-add a tab pls
-
-1. •	FACILITY
-2. •	CLIENT MAKEOVERS
+<mat-tab-group mat-stretch-tabs>
+  <mat-tab label="First">
+    <h2>Gallerize Example</h2>
+    <p class="galleryContainer" gallerize>
+      <img *ngFor="let img of imageData" [src]="img.srcUrl" />
+    </p>
+  </mat-tab>
+  <mat-tab label="Second">
+    <h2>Gallerize Example</h2>
+    <p class="galleryContainer" gallerize>
+      <img *ngFor="let img of imageData" [src]="img.srcUrl" />
+    </p>
+  </mat-tab>
+</mat-tab-group>
