@@ -1,9 +1,9 @@
 .mainHeader {
-  @media (max-width: 767px) {
+  @media (max-width: 959px) {
     position: relative;
     background-color: #f7f7f7;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     background: linear-gradient(to right, #f7f7f7 30%, #fff 70%);
   }
   .contentWrap {
@@ -11,22 +11,36 @@
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    @media (max-width: 767px) {
+    @media (max-width: 959px) {
       justify-content: center;
       border-bottom: 1px solid #e6e6e6;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 960px) {
       height: 165px;
       justify-content: space-between;
+    }
+  }
+
+  .fixedHeader & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    .contentWrap {
+      @media (min-width: 960px) {
+        height: 0;
+        padding: 0;
+      }
     }
   }
 }
 
 .logo {
-  @media (max-width: 1023px) {
+  @media (max-width: 959px) {
     width: 200px;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 960px) {
     width: 300px;
   }
   &::before {
@@ -37,27 +51,51 @@
     background: url("../images/logo-main.jpg") no-repeat;
     background-size: 100%;
   }
+  .fixedHeader & {
+    @media (min-width: 960px) {
+      width: 70px;
+      position: fixed;
+      top: 5px;
+      left: 10px;
+      z-index: 1;
+      &:before {
+        padding-bottom: 70px;
+        background-image: url("../images/logo-small.png");
+        background-size: cover;
+      }
+    }
+  }
 }
 
 .btn.bookAppoinment {
   isplay: none;
-  @media (max-width: 767px) {
+  @media (max-width: 959px) {
     display: none;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     display: inline-flex;
+    .fixedHeader & {
+      position: fixed;
+      top: 19px;
+      right: 10px;
+      z-index: 1;
+      font-size: 1.4rem;
+      min-width: 50px;
+      padding: 0 1rem;
+      height: 40px;
+    }
   }
 }
 
 .hamburger {
   cursor: pointer;
-  @media (max-width: 767px) {
+  @media (max-width: 959px) {
     position: absolute;
     top: 0;
     left: 0;
     padding: 15px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     display: none;
   }
   i {
@@ -72,7 +110,7 @@
 }
 
 .mainNav {
-  @media (max-width: 767px) {
+  @media (max-width: 959px) {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -89,19 +127,23 @@
     position: relative;
     background: #fff;
     display: flex;
-    @media (max-width: 767px) {
+    @media (max-width: 959px) {
       width: 280px;
       height: 100%;
       overflow: auto;
       padding: 40px 12px 16px;
       flex-direction: column;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 960px) {
       height: 54px;
       justify-content: center;
       border-top: 1px solid #e6e6e6;
       border-bottom: 1px solid #e6e6e6;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      .fixedHeader & {
+        height: 80px;
+        padding-right: 50px;
+      }
     }
   }
   a {
@@ -113,13 +155,13 @@
     display: inline-flex;
     align-items: center;
 
-    @media (max-width: 767px) {
+    @media (max-width: 959px) {
       width: 100%;
       line-height: 44px;
       padding-left: 12px;
       border-bottom: 1px solid #ddd;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 960px) {
       margin: 0 1.5vw;
     }
 
@@ -130,7 +172,7 @@
         position: absolute;
         left: 0;
       }
-      @media (max-width: 767px) {
+      @media (max-width: 959px) {
         &:before {
           top: 8px;
           bottom: 8px;
@@ -138,7 +180,7 @@
           background-image: linear-gradient(to bottom, #07a7e3, #37d6c0);
         }
       }
-      @media (min-width: 768px) {
+      @media (min-width: 960px) {
         &:before {
           top: 0;
           right: 0;
@@ -160,7 +202,7 @@
     border-radius: 50%;
     background: #f5f5f5;
     cursor: pointer;
-    @media (min-width: 768px) {
+    @media (min-width: 960px) {
       display: none;
     }
   }
