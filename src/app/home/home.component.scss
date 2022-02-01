@@ -304,6 +304,34 @@
   }
 }
 
+.appTextbox {
+  width: 100%;
+  color: #fff;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+  height: 44px;
+  padding: 0 15px;
+  outline: 0;
+  &:hover,
+  &:focus {
+    border-color: #fff;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: #eee;
+}
+
+:-ms-input-placeholder {
+  color: #eee;
+}
+
+::placeholder {
+  color: #eee;
+}
+
 @keyframes scaleUp {
   0% {
     transform: scale(0.5);

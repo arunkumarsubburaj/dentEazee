@@ -39,18 +39,8 @@
   }
 }
 
-.bookAppoinment {
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  font-weight: 500;
-  font-size: 1.8rem;
-  min-width: 200px;
-  height: 48px;
-  color: #fff;
-  background: linear-gradient(to right, #08a7e3, #37d6c0);
-  border-radius: 5px;
-  display: none;
+.btn.bookAppoinment {
+  isplay: none;
   @media (max-width: 767px) {
     display: none;
   }
@@ -96,6 +86,7 @@
     }
   }
   nav {
+    position: relative;
     background: #fff;
     display: flex;
     @media (max-width: 767px) {

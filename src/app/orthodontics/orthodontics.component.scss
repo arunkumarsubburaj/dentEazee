@@ -1,0 +1,58 @@
+.orthodonticsList {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, #fff, #eee);
+
+  ul {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        flex: 0 0 calc(50% - 20px);
+        margin-bottom: 40px;
+      }
+    }
+    @media (min-width: 1200px) {
+      li {
+        flex: 0 0 calc(25% - 20px);
+      }
+    }
+    li {
+      position: relative;
+      border: 1px solid rgba(229, 229, 229, 0.8);
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff;
+      padding-top: 9rem;
+      margin-top: 10rem;
+
+      figure {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16rem;
+        height: 16rem;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0 0 0 5px rgba(243, 243, 243, 0.8) inset;
+      }
+      section {
+        padding: 2rem;
+        text-align: center;
+      }
+      h3 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 1em;
+      }
+      p {
+        font-size: 1.6;
+        line-height: 1.5;
+      }
+    }
+  }
+}

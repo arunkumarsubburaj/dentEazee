@@ -77,9 +77,12 @@ body {
   }
   @media (min-width: 768px) {
     padding: 0 20px;
-    > * {
+    figure {
+      flex: 0 0 calc(50% - 40px);
+    }
+    section {
       flex: 0 0 50%;
-      padding: 0 20px;
+      padding-left: 40px;
     }
   }
 
@@ -88,6 +91,7 @@ body {
     overflow: hidden;
     img {
       max-width: 100%;
+      display: block;
     }
   }
 
@@ -100,5 +104,107 @@ body {
   p {
     font-size: 1.6rem;
     line-height: 1.5;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.btn {
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  min-width: 200px;
+  height: 48px;
+  color: #fff;
+  background: linear-gradient(to right, #08a7e3, #37d6c0);
+  border-radius: 5px;
+  display: inline-flex;
+}
+
+.pageDesc {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.bookForm {
+  > div {
+    margin-bottom: 2rem;
+  }
+  .btnWrap {
+    justify-content: center;
+  }
+  label {
+    display: block;
+  }
+  @media (min-width: 600px) {
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      padding: 0 10px;
+    }
+    .fullCol {
+      flex: 0 0 100%;
+      display: flex;
+      align-items: center;
+    }
+    .col2 {
+      flex: 0 0 50%;
+    }
+  }
+}
+.bookAppWrap {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  margin-bottom: 10rem;
+  @media (max-width: 1023px) {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  aside,
+  section {
+    flex: 0 0 100%;
+  }
+  aside {
+    background: #32b8da;
+    padding: 3rem 2rem;
+    border-radius: 10px 10px 0 0;
+
+    p {
+      padding: 1rem 0;
+      display: flex;
+      font-size: 1.8rem;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    @media (min-width: 1024px) {
+      flex: 0 0 30rem;
+      border-radius: 10px 0 0 10px;
+      p {
+        padding: 2rem 0;
+      }
+    }
+  }
+  h2 {
+    font-style: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .bookFormWrap {
+    background: #07a7e3;
+    padding: 3rem 2rem;
+    border-radius: 0 0 10px 10px;
+    @media (min-width: 1024px) {
+      flex: 0 0 calc(100% - 30rem);
+      border-radius: 0 10px 10px 0;
+    }
   }
 }
