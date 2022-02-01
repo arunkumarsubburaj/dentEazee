@@ -23,19 +23,44 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { BookAppoinmentComponent } from './book-appoinment/book-appoinment.component';
 
+import { MatTabsModule } from '@angular/material/tabs';
+import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from 'ng-gallery/lightbox';
 @NgModule({
-  declarations: [AppComponent, ShellComponent, LoginComponent, LoaderComponent, HomeComponent, AboutUsComponent, ServicesComponent, OrthodonticsComponent, TestimonialsComponent, GalleryComponent, BlogComponent, ContactUsComponent, BookAppoinmentComponent],
+  declarations: [
+    AppComponent,
+    ShellComponent,
+    LoginComponent,
+    LoaderComponent,
+    HomeComponent,
+    AboutUsComponent,
+    ServicesComponent,
+    OrthodonticsComponent,
+    TestimonialsComponent,
+    GalleryComponent,
+    BlogComponent,
+    ContactUsComponent,
+    BookAppoinmentComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
+    MatTabsModule,
     ToastrModule.forRoot({
       preventDuplicates: true,
       closeButton: true,
       positionClass: 'custom-center',
     }),
+    GalleryModule.withConfig({
+      thumbPosition: 'bottom',
+      thumb: false,
+      dots: true,
+      dotsPosition: 'bottom',
+    }),
+    LightboxModule,
   ],
   exports: [HttpClientModule],
   providers: [
