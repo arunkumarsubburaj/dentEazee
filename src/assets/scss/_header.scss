@@ -9,13 +9,13 @@
   .contentWrap {
     display: flex;
     align-items: center;
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     @media (max-width: 767px) {
       justify-content: center;
       border-bottom: 1px solid #e6e6e6;
     }
     @media (min-width: 768px) {
-      padding: 0 20px;
       height: 165px;
       justify-content: space-between;
     }
