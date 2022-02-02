@@ -25,6 +25,7 @@ import { BookAppoinmentComponent } from './book-appoinment/book-appoinment.compo
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
 @NgModule({
@@ -51,6 +52,8 @@ import { LightboxModule } from 'ng-gallery/lightbox';
     HttpClientModule,
     MatTabsModule,
     MatSelectModule,
+    MatDialogModule,
+
     ToastrModule.forRoot({
       preventDuplicates: true,
       closeButton: true,

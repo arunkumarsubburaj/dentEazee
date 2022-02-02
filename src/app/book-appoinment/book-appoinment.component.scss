@@ -1,0 +1,41 @@
+.appTextbox {
+  width: 100%;
+  color: #fff;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+  height: 44px;
+  padding: 0 15px;
+  outline: 0;
+  &:hover,
+  &:focus {
+    border-color: #fff;
+  }
+}
+.readMoreBtn {
+  min-width: 15rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #5d7d4e;
+  background: linear-gradient(to bottom, #fff, #e1e1e1);
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.4rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-input-placeholder {
+  color: #eee;
+}
+
+:-ms-input-placeholder {
+  color: #eee;
+}
+
+::placeholder {
+  color: #eee;
+}

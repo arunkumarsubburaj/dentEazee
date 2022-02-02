@@ -2,7 +2,9 @@
   <header class="mainHeader">
     <div class="contentWrap">
       <a href="index.html" class="logo"></a>
-      <div class="bookAppoinment btn">Book Appoinment</div>
+      <div class="bookAppoinment btn" (click)="openDialog()">
+        Book Appoinment
+      </div>
     </div>
     <div class="hamburger" (click)="toggleSideMenu()">
       <i></i><i></i><i></i>
@@ -12,11 +14,17 @@
         <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
         <a [routerLink]="['/aboutUs']" routerLinkActive="active">About Us</a>
         <a [routerLink]="['/services']" routerLinkActive="active">Services</a>
-        <a [routerLink]="['/orthodontics']" routerLinkActive="active">Orthodontics</a>
-        <a [routerLink]="['/testimonials']" routerLinkActive="active">Testimonials</a>
+        <a [routerLink]="['/orthodontics']" routerLinkActive="active"
+          >Orthodontics</a
+        >
+        <a [routerLink]="['/testimonials']" routerLinkActive="active"
+          >Testimonials</a
+        >
         <a [routerLink]="['/gallery']" routerLinkActive="active">Gallery</a>
         <a [routerLink]="['/blog']" routerLinkActive="active">Blog</a>
-        <a [routerLink]="['/contactUs']" routerLinkActive="active">Contact Us</a>
+        <a [routerLink]="['/contactUs']" routerLinkActive="active"
+          >Contact Us</a
+        >
       </nav>
       <div class="closeMenu" (click)="toggleSideMenu()">x</div>
     </div>
@@ -31,14 +39,22 @@
           <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
           <a [routerLink]="['/aboutUs']" routerLinkActive="active">About Us</a>
           <a [routerLink]="['/services']" routerLinkActive="active">Services</a>
-          <a [routerLink]="['/orthodontics']" routerLinkActive="active">Orthodontics</a>
-          <a [routerLink]="['/testimonials']" routerLinkActive="active">Testimonials</a>
+          <a [routerLink]="['/orthodontics']" routerLinkActive="active"
+            >Orthodontics</a
+          >
+          <a [routerLink]="['/testimonials']" routerLinkActive="active"
+            >Testimonials</a
+          >
           <a [routerLink]="['/gallery']" routerLinkActive="active">Gallery</a>
           <a [routerLink]="['/blog']" routerLinkActive="active">Blog</a>
-          <a [routerLink]="['/contactUs']" routerLinkActive="active">Contact Us</a>
+          <a [routerLink]="['/contactUs']" routerLinkActive="active"
+            >Contact Us</a
+          >
         </nav>
         <div class="socialMedia">
-          <a href="" class="icon-facebook"></a><a href="" class="icon-twitter"></a><a href="" class="icon-youtube"></a>
+          <a href="" class="icon-facebook"></a
+          ><a href="" class="icon-twitter"></a
+          ><a href="" class="icon-youtube"></a>
         </div>
       </div>
     </div>
@@ -46,7 +62,10 @@
       <div class="contentWrap">
         <div class="footerRow">
           <div>denteazee &copy; 2022 / All&nbsp;Rights&nbsp;Reserved</div>
-          <div><a href="">Privacy Policy</a> | <a href="">Terms&nbsp;and&nbsp;Condition</a></div>
+          <div>
+            <a href="">Privacy Policy</a> |
+            <a href="">Terms&nbsp;and&nbsp;Condition</a>
+          </div>
         </div>
       </div>
     </div>
