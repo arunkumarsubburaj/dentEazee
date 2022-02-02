@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ScrollbarEvents } from 'swiper/types';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'quizabled';
-  // @ViewChild(ToastContainerDirective, { static: true })
-  // toastContainer!: ToastContainerDirective;
-  // constructor(private toastrService: ToastrService) {}
-  ngOnInit() {
-    // this.toastrService.overlayContainer = this.toastContainer;
+  title = '';
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event: ScrollbarEvents) {
+    console.debug('Scroll Event', event);
+    if (window.scrollY >= 165) {
+      document.body.classList.add('fixedHeader');
+    } else {
+      document.body.classList.remove('fixedHeader');
+    }
   }
+  ngOnInit() {}
 }
