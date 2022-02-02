@@ -1,7 +1,11 @@
 .mainHeader {
   @media (max-width: 959px) {
-    position: relative;
-    background-color: #f7f7f7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: linear-gradient(to right, #fff, #f7f7f7 20%, #f7f7f7 80%, #fff);
   }
   @media (min-width: 960px) {
     background: linear-gradient(to right, #f7f7f7 30%, #fff 70%);
@@ -22,15 +26,17 @@
   }
 
   .fixedHeader & {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    .contentWrap {
-      @media (min-width: 960px) {
-        height: 0;
-        padding: 0;
+    @media (min-width: 960px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      .contentWrap {
+        @media (min-width: 960px) {
+          height: 0;
+          padding: 0;
+        }
       }
     }
   }
@@ -102,7 +108,8 @@
     width: 30px;
     display: block;
     height: 3px;
-    background: linear-gradient(to right, #08a7e3, #37d6c0);
+    // background: linear-gradient(to right, #08a7e3, #37d6c0);
+    background: #777;
     &:nth-child(2) {
       margin: 6px 0;
     }
@@ -163,6 +170,22 @@
     }
     @media (min-width: 960px) {
       margin: 0 1.5vw;
+    }
+
+    &:not(.active)::after {
+      content: "";
+      position: absolute;
+      top: calc(50% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      background: #08a7e3;
+      width: 0;
+      transition: 0.18s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
 
     &.active {

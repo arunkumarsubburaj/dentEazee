@@ -1,6 +1,87 @@
 .bannerSlider {
-  height: 400px;
-  background: teal;
+  height: 500px;
+  background: url("../../assets/images/home-banner.jpg") no-repeat center center;
+  background-size: cover;
+
+  @media (max-width: 959px) {
+    display: none;
+  }
+}
+
+.homeBannerSlideItem {
+  width: 100vw;
+  height: 500px;
+  .contentWrap {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  figure {
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: initial;
+      display: block;
+    }
+  }
+}
+.slideItemContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .line1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+  }
+  .boxText {
+    padding: 5px 15px;
+    font-size: 3.6rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.15);
+    margin-bottom: 10px;
+  }
+}
+.slide2 {
+  figure {
+    img {
+      margin-left: auto;
+    }
+  }
+  .slideItemContent {
+    left: 5%;
+    .boxText {
+      background: rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+::ng-deep {
+  .swiper-slide-active {
+    figure {
+      animation: fadeRightBig 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.25s both;
+    }
+    .slideItemContent {
+      > * {
+        animation: fadeLeftMed 0.75s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s both;
+      }
+      > *:nth-child(2) {
+        animation-delay: 0.58s;
+      }
+      > *:nth-child(3) {
+        animation-delay: 0.66s;
+      }
+    }
+  }
 }
 
 .welcome {
@@ -355,6 +436,36 @@
 @keyframes fadeLeft {
   0% {
     transform: translateX(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeLeftBig {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeRightBig {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeLeftMed {
+  0% {
+    transform: translateX(50px);
     opacity: 0;
   }
   100% {

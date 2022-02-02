@@ -1,8 +1,29 @@
 <div class="bannerSlider">
   <swiper class="mySwiper" [config]="config">
-    <ng-template swiperSlide> Swipe Template 1 </ng-template>
-    <ng-template swiperSlide> Swipe Template 2</ng-template>
-    <ng-template swiperSlide> Swipe Template 3</ng-template>
+    <ng-template swiperSlide>
+      <div class="homeBannerSlideItem slide1">
+        <div class="contentWrap">
+          <figure><img src="../../assets/images/home-slide1.png" alt=""></figure>
+          <div class="slideItemContent">
+            <div class="line1">Welcome to Denteazee!</div>
+            <div class="boxText">One Stop for all</div>
+            <div class="boxText">Dental Needs</div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="homeBannerSlideItem slide2">
+        <div class="contentWrap">
+          <figure><img src="../../assets/images/home-slide2.png" alt=""></figure>
+          <div class="slideItemContent">
+            <div class="line1">Lorem ipsum, dolor</div>
+            <div class="boxText">consectetur adipisicing</div>
+            <div class="boxText">Eveniet, soluta?</div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
   </swiper>
 </div>
 
