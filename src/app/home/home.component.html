@@ -136,23 +136,34 @@
       <form action="" class="bookForm">
         <div class="fullCol">
           <label>Select Department</label>
-          <select name="" id=""></select>
+          <mat-select>
+            <mat-option
+              *ngFor="let department of departments"
+              [value]="department.value"
+            >
+              {{ department.viewValue }}
+            </mat-option>
+          </mat-select>
         </div>
         <div class="col2">
-          <input type="text" placeholder="Name" class="appTextbox">
+          <input type="text" placeholder="Name" class="appTextbox" />
         </div>
         <div class="col2">
-          <input type="text" placeholder="Email" class="appTextbox">
+          <input type="text" placeholder="Email" class="appTextbox" />
         </div>
         <div class="col2">
-          <input type="text" placeholder="Mobile Number" class="appTextbox">
+          <input type="text" placeholder="Mobile Number" class="appTextbox" />
         </div>
         <div class="col2">
-          <input type="text" placeholder="Date" class="appTextbox">
+          <input type="text" placeholder="Date" class="appTextbox" />
         </div>
         <div class="fullCol">
           <label>Select Time</label>
-          <select name="" id=""></select>
+          <mat-select>
+            <mat-option *ngFor="let time of times" [value]="time.value">
+              {{ time.viewValue }}
+            </mat-option>
+          </mat-select>
         </div>
         <div class="fullCol btnWrap">
           <button type="submit" class="readMoreBtn">Book</button>
@@ -174,21 +185,31 @@
         <ng-template swiperSlide>
           <div class="testimonyItem">
             <figure></figure>
-            <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, facere!</div>
+            <div class="desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
+              facere!
+            </div>
             <div class="username">- John Doe</div>
           </div>
         </ng-template>
         <ng-template swiperSlide>
           <div class="testimonyItem">
             <figure></figure>
-            <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, facere!</div>
+            <div class="desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit. Omnis, facere!
+            </div>
             <div class="username">- John Doe</div>
           </div>
         </ng-template>
         <ng-template swiperSlide>
           <div class="testimonyItem">
             <figure></figure>
-            <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, facere! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, facere!</div>
+            <div class="desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
+              facere! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Omnis, facere!
+            </div>
             <div class="username">- John Doe</div>
           </div>
         </ng-template>
@@ -251,17 +272,17 @@
     </div>
     <ul>
       <li>Friendly & well-trained chair side assistants</li>
-      <li> Smile Designing</li>
-      <li> Digital analysis of the jaws and teeth</li>
-      <li> Diagnosis using the intraoral camera & Digital Photographs</li>
-      <li> Sterile & up-to-date equipments</li>
-      <li> We practice specialty dental care and quality treatment delivery</li>
-      <li> Customised treatment planning with all the specialists at a time </li>
-      <li> 24 hour / round the clock on-call emergency services </li>
-      <li> Home visits for patients with special care needs</li>
-      <li> Root canal fillings in one visit </li>
-      <li> Latest all ceramic with zirconium crowns & bridges </li>
-      <li>  Friendly & Well trained Dentists & Staff</li>
+      <li>Smile Designing</li>
+      <li>Digital analysis of the jaws and teeth</li>
+      <li>Diagnosis using the intraoral camera & Digital Photographs</li>
+      <li>Sterile & up-to-date equipments</li>
+      <li>We practice specialty dental care and quality treatment delivery</li>
+      <li>Customised treatment planning with all the specialists at a time</li>
+      <li>24 hour / round the clock on-call emergency services</li>
+      <li>Home visits for patients with special care needs</li>
+      <li>Root canal fillings in one visit</li>
+      <li>Latest all ceramic with zirconium crowns & bridges</li>
+      <li>Friendly & Well trained Dentists & Staff</li>
     </ul>
   </div>
 </div>

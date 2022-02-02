@@ -24,6 +24,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { BookAppoinmentComponent } from './book-appoinment/book-appoinment.component';
 
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatSelectModule } from '@angular/material/select';
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
 @NgModule({
@@ -49,6 +50,7 @@ import { LightboxModule } from 'ng-gallery/lightbox';
     SharedModule,
     HttpClientModule,
     MatTabsModule,
+    MatSelectModule,
     ToastrModule.forRoot({
       preventDuplicates: true,
       closeButton: true,
