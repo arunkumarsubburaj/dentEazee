@@ -145,6 +145,7 @@ body {
   > div {
     margin-bottom: 2rem;
   }
+
   .btnWrap {
     justify-content: center;
   }
@@ -205,9 +206,9 @@ body {
     }
   }
   h2 {
-    font-style: 2.2rem;
+    font-size: 2.2rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   .bookFormWrap {
     background: #07a7e3;
@@ -221,8 +222,176 @@ body {
       border-radius: 0 10px 10px 0;
     }
   }
+  .mat-form-field {
+    display: block;
+    width: 100%;
+  }
+  .mat-select {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 22px;
+    height: 44px;
+    padding: 0 15px;
+    outline: 0;
+    &:hover,
+    &:focus {
+      border-color: #fff;
+    }
+  }
+  .mat-select-value {
+    color: #fff;
+  }
+  .mat-select-trigger {
+    display: block;
+    width: 100%;
+  }
+  .mat-select-arrow {
+    color: #fff;
+  }
+  .mat-select-value-text {
+    font-size: 1.4rem;
+  }
 
-  // .mat-select {
-  //   border: ;
-  // }
+  ::-webkit-input-placeholder {
+    color: #eee;
+  }
+
+  :-ms-input-placeholder {
+    color: #eee;
+  }
+
+  ::placeholder {
+    color: #eee;
+  }
+
+  .readMoreBtn {
+    color: #07a7e3;
+    margin-top: 2rem;
+    padding: 0 3rem;
+    @media (max-width: 1023px) {
+      width: 100%;
+    }
+  }
+}
+
+.appTextbox {
+  width: 100%;
+  color: #fff;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+  height: 44px;
+  padding: 0 15px;
+  outline: 0;
+  font-size: 1.4rem;
+  &:hover,
+  &:focus {
+    border-color: #fff;
+  }
+}
+
+.readMoreBtn {
+  min-width: 15rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #5d7d4e;
+  background: linear-gradient(to bottom, #fff, #e1e1e1);
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.4rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+button {
+  cursor: pointer;
+}
+
+.mat-tab-label {
+  height: 60px !important;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  margin: 0 2px;
+  border-radius: 3px;
+  opacity: 1 !important;
+  color: #767676;
+  @media (max-width: 767px) {
+    padding: 0 5px !important;
+    max-width: 33.3vw;
+  }
+}
+.mat-tab-label-active {
+  background: linear-gradient(to right, #08a7e3, #37d6c0);
+  color: #fff;
+  border-color: #08a7e3;
+}
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #08a7e3;
+}
+
+.whyChooseUsTab {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  figure {
+    width: 200px;
+    max-width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 599px) {
+    flex-direction: column;
+    align-items: center;
+
+    figure {
+      margin-bottom: 3rem;
+    }
+  }
+  @media (min-width: 600px) {
+    section {
+      flex: 0 0 calc(100% - 250px);
+      margin-left: 50px;
+    }
+  }
+}
+
+.whyUsTab {
+  @media (max-width: 767px) {
+    margin: 0 -20px;
+  }
+}
+
+.g-image-item {
+  background-size: contain !important;
+}
+.g-backdrop {
+  background: rgba(0, 0, 0, 0.8) !important;
+  opacity: 1 !important;
 }

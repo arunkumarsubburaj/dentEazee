@@ -4,10 +4,6 @@
   align-items: center;
   margin-bottom: 10rem;
 
-  @media (min-width: 1024px) {
-    flex-direction: row;
-  }
-
   figure {
     width: 200px;
     height: 200px;
@@ -62,6 +58,16 @@
       font-style: italic;
       font-style: 1.4rem;
       font-weight: 600;
+    }
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    &:nth-child(even) {
+      figure {
+        order: 2;
+        margin-right: 0;
+        margin-left: 50px;
+      }
     }
   }
 }

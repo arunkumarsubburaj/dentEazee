@@ -8,17 +8,6 @@
   <section class="bookFormWrap">
     <h2>Booking a Visit</h2>
     <form action="" class="bookForm">
-      <div class="fullCol">
-        <label>Select Department</label>
-        <mat-select>
-          <mat-option
-            *ngFor="let department of departments"
-            [value]="department.value"
-          >
-            {{ department.viewValue }}
-          </mat-option>
-        </mat-select>
-      </div>
       <div class="col2">
         <input type="text" placeholder="Name" class="appTextbox" />
       </div>
@@ -31,16 +20,24 @@
       <div class="col2">
         <input type="text" placeholder="Date" class="appTextbox" />
       </div>
-      <div class="fullCol">
-        <label>Select Time</label>
+      <div class="col2">
         <mat-select>
           <mat-option *ngFor="let time of times" [value]="time.value">
             {{ time.viewValue }}
           </mat-option>
         </mat-select>
       </div>
+      <div class="col2">
+        <mat-select>
+          <mat-option
+          *ngFor="let department of departments"
+          [value]="department.value">
+            {{ department.viewValue }}
+          </mat-option>
+        </mat-select>
+      </div>
       <div class="fullCol btnWrap">
-        <button type="submit" class="readMoreBtn">Book</button>
+        <button type="submit" class="readMoreBtn">Book Appoinment</button>
       </div>
     </form>
   </section>

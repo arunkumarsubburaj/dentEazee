@@ -66,7 +66,7 @@
   }
 }
 ::ng-deep {
-  .swiper-slide-active {
+  .bannerSlider .swiper-slide-active {
     figure {
       animation: fadeRightBig 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.25s both;
     }
@@ -117,7 +117,7 @@
 }
 
 .homeServices {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   ul {
     padding: 0 1rem;
     display: flex;
@@ -383,34 +383,6 @@
       }
     }
   }
-}
-
-.appTextbox {
-  width: 100%;
-  color: #fff;
-  font-family: inherit;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 22px;
-  height: 44px;
-  padding: 0 15px;
-  outline: 0;
-  &:hover,
-  &:focus {
-    border-color: #fff;
-  }
-}
-
-::-webkit-input-placeholder {
-  color: #eee;
-}
-
-:-ms-input-placeholder {
-  color: #eee;
-}
-
-::placeholder {
-  color: #eee;
 }
 
 @keyframes scaleUp {

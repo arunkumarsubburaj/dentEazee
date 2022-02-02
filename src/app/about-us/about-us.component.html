@@ -95,7 +95,42 @@
     </div>
 
     <div class="patientsSay">
-      add a slider similar to home testimony
+      <div class="contentWrap">
+        <h2>What Our Patients Are Saying</h2>
+        <swiper class="mySwiper" [config]="config">
+          <ng-template swiperSlide>
+            <div class="patientCommentItem">
+              <figure style="background-image: url('../../assets/images/profile.jpg');"></figure>
+              <div class="desc">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
+                facere!
+              </div>
+              <div class="username">- John Doe</div>
+            </div>
+          </ng-template>
+          <ng-template swiperSlide>
+            <div class="patientCommentItem">
+              <figure style="background-image: url('../../assets/images/profile.jpg');"></figure>
+              <div class="desc">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
+                facere!
+              </div>
+              <div class="username">- John Doe</div>
+            </div>
+          </ng-template>
+          <ng-template swiperSlide>
+            <div class="patientCommentItem">
+              <figure style="background-image: url('../../assets/images/profile.jpg');"></figure>
+              <div class="desc">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
+                facere! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis,
+                facere!
+              </div>
+              <div class="username">- John Doe</div>
+            </div>
+          </ng-template>
+        </swiper>
+      </div>
     </div>
   </div>
 </div>

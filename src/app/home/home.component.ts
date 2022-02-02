@@ -3,6 +3,7 @@ import SwiperCore, {
   Autoplay,
   Pagination,
   Navigation,
+  EffectFade,
   SwiperOptions,
 } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
@@ -20,6 +21,10 @@ export class HomeComponent implements OnInit {
     spaceBetween: 50,
     autoHeight: true,
     navigation: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     centeredSlides: true,
     autoplay: { delay: 3000, disableOnInteraction: false },
     scrollbar: { draggable: true },
