@@ -16,14 +16,29 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 })
 export class HomeComponent implements OnInit {
   constructor() {}
-  config: SwiperOptions = {
+  configBanner: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 50,
     autoHeight: true,
     navigation: true,
     effect: 'fade',
     fadeEffect: {
-      crossFade: true
+      crossFade: true,
+    },
+    pagination: true,
+    centeredSlides: true,
+    autoplay: { delay: 3000, disableOnInteraction: false },
+    scrollbar: { draggable: true },
+    loop: true,
+  };
+  configTestimonial: SwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 50,
+    autoHeight: true,
+    navigation: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
     },
     centeredSlides: true,
     autoplay: { delay: 3000, disableOnInteraction: false },

@@ -1,9 +1,11 @@
 <div class="bannerSlider">
-  <swiper class="mySwiper" [config]="config">
+  <swiper class="mySwiper" [config]="configBanner">
     <ng-template swiperSlide>
       <div class="homeBannerSlideItem slide1">
         <div class="contentWrap">
-          <figure><img src="../../assets/images/home-slide1.png" alt=""></figure>
+          <figure>
+            <img src="../../assets/images/home-slide1.png" alt="" />
+          </figure>
           <div class="slideItemContent">
             <div class="line1">Welcome to Denteazee!</div>
             <div class="boxText">One Stop for all</div>
@@ -15,7 +17,9 @@
     <ng-template swiperSlide>
       <div class="homeBannerSlideItem slide2">
         <div class="contentWrap">
-          <figure><img src="../../assets/images/home-slide2.png" alt=""></figure>
+          <figure>
+            <img src="../../assets/images/home-slide2.png" alt="" />
+          </figure>
           <div class="slideItemContent">
             <div class="line1">Lorem ipsum, dolor</div>
             <div class="boxText">consectetur adipisicing</div>
@@ -155,7 +159,7 @@
       <h3>What our patients say about us</h3>
     </div>
     <div class="testimonySlider">
-      <swiper class="mySwiper" [config]="config">
+      <swiper class="mySwiper" [config]="configTestimonial">
         <ng-template swiperSlide>
           <div class="testimonyItem">
             <figure></figure>
@@ -263,28 +267,62 @@
       <mat-tab-group mat-stretch-tabs>
         <mat-tab label="Kids Dentist">
           <div class="whyChooseUsTab">
-            <figure style="background-image: url('../../assets/images/pediatric-dentistry.jpg');"></figure>
+            <figure
+              style="
+                background-image: url('../../assets/images/pediatric-dentistry.jpg');
+              "
+            ></figure>
             <section>
               <h3>Pediatric dentistry</h3>
-              <p>Pediatric dentists are dedicated to the oral health of children from infancy through the teen years. They have the experience and qualifications to care for a child’s teeth, gums, and mouth throughout the various stages of childhood. Children are not just small adults. They are not always able to be patient and cooperative during a dental exam. Pediatric dentists know how to examine and treat children.</p>
+              <p>
+                Pediatric dentists are dedicated to the oral health of children
+                from infancy through the teen years. They have the experience
+                and qualifications to care for a child’s teeth, gums, and mouth
+                throughout the various stages of childhood. Children are not
+                just small adults. They are not always able to be patient and
+                cooperative during a dental exam. Pediatric dentists know how to
+                examine and treat children.
+              </p>
             </section>
           </div>
         </mat-tab>
         <mat-tab label="Oral Surgery">
           <div class="whyChooseUsTab">
-            <figure style="background-image: url('../../assets/images/teeth-cleaning.jpg');"></figure>
+            <figure
+              style="
+                background-image: url('../../assets/images/teeth-cleaning.jpg');
+              "
+            ></figure>
             <section>
               <h3>Oral and maxillofacial surgery</h3>
-              <p>Oral surgery deals with the treatment and ongoing management of irregularities and pathology of the jaw and mouth that require surgical intervention. Surgically removing teeth is the most common procedure that oral surgeons perform, but oral surgery as a specialty has a broad scope. This includes managing hard and soft tissue pathology, oral infections, dentoalveolar trauma, and oro-facial pain, and others.</p>
+              <p>
+                Oral surgery deals with the treatment and ongoing management of
+                irregularities and pathology of the jaw and mouth that require
+                surgical intervention. Surgically removing teeth is the most
+                common procedure that oral surgeons perform, but oral surgery as
+                a specialty has a broad scope. This includes managing hard and
+                soft tissue pathology, oral infections, dentoalveolar trauma,
+                and oro-facial pain, and others.
+              </p>
             </section>
           </div>
         </mat-tab>
         <mat-tab label="Orthodontics">
           <div class="whyChooseUsTab">
-            <figure style="background-image: url('../../assets/images/profile.jpg');"></figure>
+            <figure
+              style="background-image: url('../../assets/images/profile.jpg')"
+            ></figure>
             <section>
               <h3>Orthodontic Treatment</h3>
-              <p>Orthodontics is the branch of dentistry concerned with the growth of the face, the development of teeth and jaws, and the correction and prevention of abnormalities. Orthodontics has a strong hospital-based consultant service that concentrates on treating more severe abnormalities. That said, orthodontic specialty practice in the high street is well-developed and expanding with opportunities for NHS.</p>
+              <p>
+                Orthodontics is the branch of dentistry concerned with the
+                growth of the face, the development of teeth and jaws, and the
+                correction and prevention of abnormalities. Orthodontics has a
+                strong hospital-based consultant service that concentrates on
+                treating more severe abnormalities. That said, orthodontic
+                specialty practice in the high street is well-developed and
+                expanding with opportunities for NHS.
+              </p>
             </section>
           </div>
         </mat-tab>
