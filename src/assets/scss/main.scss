@@ -25,6 +25,7 @@ body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   color: #343434;
+  // transition: padding 0.12s;
 
   --swiper-navigation-size: 3rem;
   --swiper-navigation-color: #fff;
@@ -40,7 +41,7 @@ body {
   }
 
   &.fixedHeader {
-    padding-top: 80px;
+    padding-top: 200px;
   }
 }
 
