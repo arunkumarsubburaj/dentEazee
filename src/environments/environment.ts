@@ -4,10 +4,7 @@
 
 export const environment = {
   production: false,
-  // apiUrl: 'http://localhost:5000/starter-kit_node/starter-kit_ms/api',
-  apiUrl: 'http://quizabled.com/quizabled_node/v-gyana_ms/api',
-  // imagePath: 'http://localhost:80',
-  // resourceUrl: 'http://localhost/resources',
+  apiUrl: 'http://localhost:3000/',
 };
 
 /*

@@ -25,9 +25,14 @@ import { BookAppoinmentComponent } from './book-appoinment/book-appoinment.compo
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,11 +58,14 @@ import { LightboxModule } from 'ng-gallery/lightbox';
     MatTabsModule,
     MatSelectModule,
     MatDialogModule,
-
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot({
-      preventDuplicates: true,
       closeButton: true,
-      positionClass: 'custom-center',
     }),
     GalleryModule.withConfig({
       thumbPosition: 'bottom',

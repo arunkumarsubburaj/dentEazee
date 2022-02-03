@@ -7,37 +7,113 @@
   </aside>
   <section class="bookFormWrap">
     <h2>Booking a Visit</h2>
-    <form action="" class="bookForm">
+    <form class="bookForm" [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <div class="col2">
-        <input type="text" placeholder="Name" class="appTextbox" />
+        <input
+          type="text"
+          placeholder="Name"
+          class="appTextbox"
+          formControlName="name"
+        />
+        <mat-error
+          *ngIf="
+            myForm.get('name')?.invalid &&
+            (myForm.get('name')?.dirty || myForm.get('name')?.touched)
+          "
+        >
+          Please provide a name.
+        </mat-error>
       </div>
       <div class="col2">
-        <input type="text" placeholder="Email" class="appTextbox" />
+        <input
+          type="text"
+          placeholder="Email"
+          class="appTextbox"
+          formControlName="email"
+        />
+        <mat-error
+          *ngIf="
+            myForm.get('email')?.invalid &&
+            (myForm.get('email')?.dirty || myForm.get('email')?.touched)
+          "
+        >
+          {{
+            myForm.get("email")?.errors?.required
+              ? "Please provide an Email."
+              : "Please enter a valid Email"
+          }}
+        </mat-error>
       </div>
       <div class="col2">
-        <input type="text" placeholder="Mobile Number" class="appTextbox" />
+        <input
+          type="text"
+          placeholder="Mobile Number"
+          class="appTextbox"
+          formControlName="phoneNo"
+        />
+        <mat-error
+          *ngIf="
+            myForm.get('phoneNo')?.invalid &&
+            (myForm.get('phoneNo')?.dirty || myForm.get('phoneNo')?.touched)
+          "
+        >
+          Please provide a Phone number.
+        </mat-error>
       </div>
       <div class="col2">
-        <input type="text" placeholder="Date" class="appTextbox" />
+        <input
+          type="text"
+          placeholder="Date"
+          class="appTextbox"
+          formControlName="date"
+        />
+        <mat-error
+          *ngIf="
+            myForm.get('date')?.invalid &&
+            (myForm.get('date')?.dirty || myForm.get('date')?.touched)
+          "
+        >
+          Please pick a date.
+        </mat-error>
       </div>
       <div class="col2">
-        <mat-select>
+        <mat-select placeholder="Time" formControlName="time">
           <mat-option *ngFor="let time of times" [value]="time.value">
             {{ time.viewValue }}
           </mat-option>
         </mat-select>
+        <mat-error
+          *ngIf="
+            myForm.get('time')?.invalid &&
+            (myForm.get('time')?.dirty || myForm.get('time')?.touched)
+          "
+        >
+          Please pick a time.
+        </mat-error>
       </div>
       <div class="col2">
-        <mat-select>
+        <mat-select placeholder="Department" formControlName="department">
           <mat-option
-          *ngFor="let department of departments"
-          [value]="department.value">
+            *ngFor="let department of departments"
+            [value]="department.value"
+          >
             {{ department.viewValue }}
           </mat-option>
         </mat-select>
+        <mat-error
+          *ngIf="
+            myForm.get('department')?.invalid &&
+            (myForm.get('department')?.dirty ||
+              myForm.get('department')?.touched)
+          "
+        >
+          Please pick a department.
+        </mat-error>
       </div>
       <div class="fullCol btnWrap">
-        <button type="submit" class="readMoreBtn">Book Appoinment</button>
+        <button type="submit" class="readMoreBtn" [disabled]="myForm.invalid">
+          Book Appoinment
+        </button>
       </div>
     </form>
   </section>

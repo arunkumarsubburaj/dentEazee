@@ -10,7 +10,6 @@ export class AppComponent implements OnInit {
   title = '';
   @HostListener('window:scroll', ['$event'])
   scrollHandler(event: ScrollbarEvents) {
-    console.debug('Scroll Event', event);
     if (window.scrollY >= 165) {
       document.body.classList.add('fixedHeader');
     } else {

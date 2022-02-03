@@ -242,6 +242,10 @@ body {
     &:focus {
       border-color: #fff;
     }
+    span.mat-select-placeholder {
+      color: #fff;
+      font-size: 13px;
+    }
   }
   .mat-select-value {
     color: #fff;
