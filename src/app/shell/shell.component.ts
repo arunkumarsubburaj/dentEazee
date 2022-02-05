@@ -1,10 +1,11 @@
 import { ToastrService } from 'ngx-toastr';
 import { NavigationEnd, Router } from '@angular/router';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, HostListener } from '@angular/core';
 import { LoginService } from '../login/login.service';
 import { filter } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
 import { BookAppoinmentComponent } from '../book-appoinment/book-appoinment.component';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-shell',
@@ -19,7 +20,28 @@ export class ShellComponent implements OnInit, AfterViewInit {
   ) {}
   isMenuOpen: boolean = false;
   ngOnInit() {}
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+    fromEvent(
+      document.querySelector('.mainNav') as HTMLElement,
+      'click'
+    ).subscribe(
+      (eve) => {
+        const isMainNav = (eve.target as HTMLElement).classList.contains(
+          'mainNav'
+        );
+        if (isMainNav) {
+          this.toggleSideMenu();
+        }
+      },
+      (err) => {}
+    );
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo(0, 0);
+        this.toggleSideMenu();
+      });
+  }
   toggleSideMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
