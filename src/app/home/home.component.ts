@@ -7,7 +7,7 @@ import SwiperCore, {
   SwiperOptions,
 } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
-SwiperCore.use([Autoplay, Pagination, Navigation]);
+SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 
 @Component({
   selector: 'app-home',
@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     spaceBetween: 50,
     autoHeight: true,
     navigation: true,
+    speed: 1000,
     effect: 'fade',
     fadeEffect: {
       crossFade: true,
@@ -28,7 +29,6 @@ export class HomeComponent implements OnInit {
     pagination: true,
     centeredSlides: true,
     autoplay: { delay: 3000, disableOnInteraction: false },
-    scrollbar: { draggable: true },
     loop: true,
   };
   configTestimonial: SwiperOptions = {
@@ -36,13 +36,8 @@ export class HomeComponent implements OnInit {
     spaceBetween: 50,
     autoHeight: true,
     navigation: true,
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
     centeredSlides: true,
     autoplay: { delay: 3000, disableOnInteraction: false },
-    scrollbar: { draggable: true },
     loop: true,
   };
 
