@@ -11,11 +11,10 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.scss']
+  styleUrls: ['./about-us.component.scss'],
 })
 export class AboutUsComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
   config: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 50,
@@ -23,11 +22,8 @@ export class AboutUsComponent implements OnInit {
     navigation: true,
     centeredSlides: true,
     autoplay: { delay: 3000, disableOnInteraction: false },
-    scrollbar: { draggable: true },
     loop: true,
   };
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

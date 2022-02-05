@@ -44,6 +44,14 @@ export class ShellComponent implements OnInit, AfterViewInit {
   }
   toggleSideMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.toggleNoScroll();
+  }
+  toggleNoScroll() {
+    if (this.isMenuOpen) {
+      document.body.classList.add('noScroll');
+    } else {
+      document.body.classList.remove('noScroll');
+    }
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(BookAppoinmentComponent, {
