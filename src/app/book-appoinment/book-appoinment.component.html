@@ -60,13 +60,19 @@
           Please provide a Phone number.
         </mat-error>
       </div>
-      <div class="col2">
+      <div class="col2" style="position: relative">
         <input
-          type="text"
+          matInput
+          [min]="minDate"
           placeholder="Date"
           class="appTextbox"
           formControlName="date"
+          [matDatepicker]="picker"
+          placeholder="Choose a date"
+          [matDatepickerFilter]="myFilter"
         />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
         <mat-error
           *ngIf="
             myForm.get('date')?.invalid &&

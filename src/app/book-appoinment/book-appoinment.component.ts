@@ -54,6 +54,12 @@ export class BookAppoinmentComponent implements OnInit {
     { value: '19:00', viewValue: '19:00' },
     { value: '20:00', viewValue: '20:00' },
   ];
+  minDate = new Date();
+  myFilter = (d: Date | null): boolean => {
+    const day = (d || new Date()).getDay();
+    // Prevent Saturday and Sunday from being selected.
+    return day !== 0;
+  };
   ngOnInit(): void {}
   onSubmit() {
     this.myForm.markAllAsTouched();
