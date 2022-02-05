@@ -67,7 +67,9 @@ export class BookAppoinmentComponent implements OnInit {
       return;
     } else {
       console.log('myForm=====>', this.myForm.getRawValue());
-      this.mailService.sendAppoinment(this.myForm.getRawValue()).subscribe(
+      const formData = this.myForm.getRawValue();
+      formData['date'] = formData.date.toLocaleDateString('en-US');
+      this.mailService.sendAppoinment(formData).subscribe(
         (res) => {
           this.toastrService.success('Mail Sent Successfully...');
         },
