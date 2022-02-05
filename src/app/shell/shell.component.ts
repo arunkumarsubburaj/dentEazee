@@ -42,7 +42,13 @@ export class ShellComponent implements OnInit, AfterViewInit {
         this.toggleSideMenu();
       });
   }
-  toggleSideMenu() {
+  isMobile() {
+    return document.documentElement.offsetWidth <= 959;
+  }
+  toggleSideMenu(): any {
+    if (!this.isMobile()) {
+      return true;
+    }
     this.isMenuOpen = !this.isMenuOpen;
     this.toggleNoScroll();
   }
