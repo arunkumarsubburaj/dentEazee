@@ -1,6 +1,7 @@
 import {
   Component,
   ElementRef,
+  Inject,
   OnInit,
   QueryList,
   ViewChild,
@@ -10,6 +11,7 @@ import { MatSelect } from '@angular/material/select';
 import { ToastrService } from 'ngx-toastr';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MailService } from 'src/shared/services/mail.service';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 interface selectObj {
   value: string;
   viewValue: string;
@@ -22,7 +24,8 @@ interface selectObj {
 export class BookAppoinmentComponent implements OnInit {
   constructor(
     private toastrService: ToastrService,
-    private mailService: MailService
+    private mailService: MailService,
+    @Inject(MAT_DIALOG_DATA) public data: { origin: string }
   ) {}
   myForm: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),

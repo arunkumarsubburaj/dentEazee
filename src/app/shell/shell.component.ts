@@ -49,6 +49,9 @@ export class ShellComponent implements OnInit, AfterViewInit {
     const dialogRef = this.dialog.open(BookAppoinmentComponent, {
       width: '90vw',
       height: 'auto',
+      data: {
+        origin: 'popup',
+      },
     });
 
     dialogRef.afterClosed().subscribe((result) => {

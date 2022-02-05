@@ -26,7 +26,7 @@ import { BookAppoinmentComponent } from './book-appoinment/book-appoinment.compo
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -79,6 +79,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    { provide: MAT_DIALOG_DATA, useValue: {} },
     JwtHelperService,
     AuthGuardService,
     AuthService,

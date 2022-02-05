@@ -111,6 +111,14 @@
         </mat-error>
       </div>
       <div class="fullCol btnWrap">
+        <button
+          mat-dialog-close
+          type="button"
+          class="readMoreBtn"
+          *ngIf="data && data.origin == 'popup'"
+        >
+          Cancel
+        </button>
         <button type="submit" class="readMoreBtn" [disabled]="myForm.invalid">
           Book Appoinment
         </button>
