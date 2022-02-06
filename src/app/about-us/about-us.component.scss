@@ -1,6 +1,7 @@
 .meetOurTeam {
   padding: 4rem 0;
   color: #fff;
+  margin-bottom: -30px;
   background: linear-gradient(315deg, #08a7e3, #37d6c0);
 
   h2 {
@@ -15,15 +16,16 @@
     flex-wrap: wrap;
     justify-content: center;
     li {
+      position: relative;
       flex: 0 0 100%;
       margin-bottom: 3rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 3rem 0;
+      padding: 3rem 0 6rem;
       border: 1px solid rgba(255, 255, 255, 0.6);
       border-radius: 5px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
       @media (min-width: 600px) {
@@ -56,17 +58,63 @@
 
       h4 {
         font-size: 1.6rem;
+        line-height: 1.6;
         font-weight: 400;
         margin-bottom: 2.4em;
+        text-align: center;
       }
 
       .socialIcons {
-        display: inline-flex;
+        position: absolute;
+        bottom: 4rem;
+        left: 0;
+        right: 0;
+        display: flex;
         align-items: center;
+        justify-content: center;
         a {
-          color: #fff;
-          font-size: 2.4rem;
-          margin: 0 2rem;
+          position: relative;
+          width: 4rem;
+          height: 4rem;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: rgb(255, 255, 255);
+          font-size: 2rem;
+          margin: 0 0.5rem;
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: 0.12s;
+          }
+          &:before {
+            position: relative;
+            z-index: 1;
+          }
+          &:hover {
+            &:after {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          &.icon-facebook:hover {
+            color: #395694;
+          }
+          &.icon-twitter:hover {
+            color: #1c9cea;
+          }
+          &.icon-instagram:hover {
+            color: #e38427;
+          }
         }
       }
     }

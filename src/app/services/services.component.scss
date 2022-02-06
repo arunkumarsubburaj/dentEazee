@@ -60,3 +60,38 @@
     }
   }
 }
+
+.serviceDetails {
+  > section {
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #ccc;
+    @media (max-width: 599px) {
+      figure {
+        display: block;
+        width: 200px;
+        margin: 0 auto 2rem;
+      }
+    }
+    @media (min-width: 600px) {
+      display: flex;
+      align-items: flex-start;
+      figure {
+        flex: 0 0 200px;
+        margin-right: 50px;
+      }
+    }
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
