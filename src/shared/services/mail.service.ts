@@ -11,4 +11,10 @@ export class MailService {
       payload
     );
   }
+  sendConntactUsMail(payload: any) {
+    return this.httpClient.post(
+      environment.apiUrl + 'email?type=contactus',
+      payload
+    );
+  }
 }
