@@ -27,13 +27,50 @@
   }
   .socialMedia {
     a {
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(255, 255, 255);
       font-size: 2rem;
-      @media (max-width: 959px) {
-        padding: 1.6rem;
+      font-weight: 400;
+      margin: 0 0.5rem;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: 0.12s;
       }
-    }
-    a:hover {
-      text-decoration: none;
+      &:before {
+        position: relative;
+        z-index: 1;
+      }
+      &:hover {
+        text-decoration: none;
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      &.icon-facebook:hover {
+        color: #395694;
+      }
+      &.icon-twitter:hover {
+        color: #1c9cea;
+      }
+      &.icon-instagram:hover {
+        color: #e38427;
+      }
     }
   }
 }
@@ -41,6 +78,7 @@
 .footerRow {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 4rem 2rem;
   > *:first-child {
     padding-right: 2rem;
@@ -50,8 +88,12 @@
 .bottomRow {
   border-top: 1px solid #69727d;
   .footerRow {
-    padding: 2rem;
+    padding: 2rem 0;
     line-height: 1.6;
+    @media (max-width: 599px) {
+      display: block;
+      text-align: center;
+    }
   }
   a {
     color: inherit;
@@ -59,5 +101,30 @@
       color: #eee;
       text-decoration: underline;
     }
+  }
+}
+
+.designedBy {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  margin: -1rem 0;
+  span {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+}
+
+.mobileLogoMenu {
+  margin-bottom: 3rem;
+  @media (min-width: 960px) {
+    display: none;
+  }
+  a {
+    border: 0;
+  }
+  .brandName,
+  .brandDesc {
+    line-height: 1;
   }
 }

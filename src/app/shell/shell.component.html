@@ -1,7 +1,14 @@
 <div class="mainWrap">
   <header class="mainHeader">
     <div class="contentWrap">
-      <a href="index.html" class="logo"></a>
+      <!-- <a href="index.html" class="logo"></a> -->
+      <a href="index.html" class="brandLogo">
+        <figure><img src="../../assets/images/dent-eazee-logo.svg" alt=""></figure>
+        <section>
+          <div class="brandName"><span class="fName">Dent</span><span>Eazee</span></div>
+          <div class="brandDesc">Speciality Dental Centre</div>
+        </section>
+      </a>
       <div class="bookAppoinment btn" (click)="openDialog()">
         Book Appoinment
       </div>
@@ -10,7 +17,17 @@
       <i></i><i></i><i></i>
     </div>
     <div class="mainNav" [ngClass]="{ show: isMenuOpen }">
+
       <nav class="navBar">
+        <div class="mobileLogoMenu">
+          <a href="index.html" class="brandLogo">
+            <figure><img src="../../assets/images/dent-eazee-logo.svg" alt=""></figure>
+            <section>
+              <div class="brandName"><span class="fName">Dent</span><span>Eazee</span></div>
+              <div class="brandDesc">Speciality Dental Centre</div>
+            </section>
+          </a>
+        </div>
         <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
         <a [routerLink]="['/aboutUs']" routerLinkActive="active">About Us</a>
         <a [routerLink]="['/services']" routerLinkActive="active">Services</a>
@@ -25,8 +42,9 @@
         <a [routerLink]="['/contactUs']" routerLinkActive="active"
           >Contact Us</a
         >
+        <div class="closeMenu" (click)="toggleSideMenu()"><span class="icon-cancel-circle"></span></div>
       </nav>
-      <div class="closeMenu" (click)="toggleSideMenu()">x</div>
+
     </div>
   </header>
   <div id="bodyContainer">
@@ -35,6 +53,10 @@
   <footer class="mainFooter">
     <div class="contentWrap">
       <div class="footerRow">
+        <div class="designedBy">
+          <span>Designed By</span>
+          <a href="https://yrmedia.in/" target="_blank"><img src="../../assets/images/logo-home.png" alt="YR Media"></a>
+        </div>
         <nav>
           <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
           <a [routerLink]="['/aboutUs']" routerLinkActive="active">About Us</a>
@@ -52,16 +74,17 @@
           >
         </nav>
         <div class="socialMedia">
-          <a href="" class="icon-facebook"></a
-          ><a href="" class="icon-twitter"></a
-          ><a href="" class="icon-youtube"></a>
+          <a href="" class="icon-facebook"></a>
+          <a href="" class="icon-instagram"></a>
         </div>
       </div>
     </div>
     <div class="bottomRow">
       <div class="contentWrap">
         <div class="footerRow">
-          <div>denteazee &copy; 2022 / All&nbsp;Rights&nbsp;Reserved</div>
+          <div>
+            denteazee &copy; 2022 / All&nbsp;Rights&nbsp;Reserved
+          </div>
           <div>
             <a href="">Privacy Policy</a> |
             <a href="">Terms&nbsp;and&nbsp;Condition</a>
