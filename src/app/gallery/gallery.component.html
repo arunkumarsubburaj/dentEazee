@@ -6,18 +6,18 @@
   </div>
   <div class="bodyContent">
     <div class="contentWrap">
-      <mat-tab-group mat-stretch-tabs>
+      <mat-tab-group mat-stretch-tabs (selectedTabChange)="tabChange($event)">
         <mat-tab label="Facility">
-          <div class="galleryContainer" gallerize>
+          <div class="galleryContainer" gallerize="lightbox">
             <div *ngFor="let img of imageData">
-              <img  [src]="img.srcUrl" />
+              <img [src]="img.srcUrl" />
             </div>
           </div>
         </mat-tab>
         <mat-tab label="Client Makeovers">
-          <div class="galleryContainer" gallerize>
-            <div *ngFor="let img of imageData">
-              <img  [src]="img.srcUrl" />
+          <div class="galleryContainer" gallerize="lightboxClient">
+            <div *ngFor="let img of imageDataClient">
+              <img [src]="img.srcUrl" />
             </div>
           </div>
         </mat-tab>
@@ -25,4 +25,3 @@
     </div>
   </div>
 </div>
-
