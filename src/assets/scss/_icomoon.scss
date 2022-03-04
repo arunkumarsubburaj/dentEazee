@@ -26,6 +26,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-root-canal:before {
+  content: "\e90a";
+}
+.icon-painless:before {
+  content: "\e90b";
+}
+.icon-mouth:before {
+  content: "\e90c";
+}
+.icon-laser:before {
+  content: "\e90d";
+}
+.icon-inlay:before {
+  content: "\e90e";
+}
 .icon-arrow-left:before {
   content: "\e900";
 }
