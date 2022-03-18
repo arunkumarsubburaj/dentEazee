@@ -49,7 +49,7 @@ export class GalleryComponent implements OnInit {
   }
 }
 
-const data = [
+const data2 = [
   {
     srcUrl: 'https://preview.ibb.co/jrsA6R/img12.jpg',
     previewUrl: 'https://preview.ibb.co/jrsA6R/img12.jpg',
@@ -68,21 +68,78 @@ const data = [
   },
 ];
 
-const data2 = [
+const data = [
   {
-    srcUrl: './../../assets/images/home-slide1.png',
-    previewUrl: './../../assets/images/home-slide1.png',
+    srcUrl: './../../assets/images/gallery/g1.jpg',
+    previewUrl: './../../assets/images/gallery/g1.jpg',
   },
   {
-    srcUrl: './../../assets/images/home-slide2.png',
-    previewUrl: './../../assets/images/home-slide2.png',
+    srcUrl: './../../assets/images/gallery/g2.jpg',
+    previewUrl: './../../assets/images/gallery/g2.jpg',
   },
   {
-    srcUrl: './../../assets/images/teeth-cleaning.jpg',
-    previewUrl: './../../assets/images/teeth-cleaning.jpg',
+    srcUrl: './../../assets/images/gallery/g3.jpg',
+    previewUrl: './../../assets/images/gallery/g3.jpg',
   },
   {
-    srcUrl: './../../assets/images/teeth-whitening.jpg',
-    previewUrl: './../../assets/images/teeth-whitening.jpg',
+    srcUrl: './../../assets/images/gallery/g4.jpg',
+    previewUrl: './../../assets/images/gallery/g4.jpg',
   },
+  {
+    srcUrl: './../../assets/images/gallery/g5.jpg',
+    previewUrl: './../../assets/images/gallery/g5.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g6.jpg',
+    previewUrl: './../../assets/images/gallery/g6.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g7.jpg',
+    previewUrl: './../../assets/images/gallery/g7.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g8.jpg',
+    previewUrl: './../../assets/images/gallery/g8.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g9.jpg',
+    previewUrl: './../../assets/images/gallery/g9.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g10.jpg',
+    previewUrl: './../../assets/images/gallery/g10.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g11.jpg',
+    previewUrl: './../../assets/images/gallery/g11.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g12.jpg',
+    previewUrl: './../../assets/images/gallery/g12.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g13.jpg',
+    previewUrl: './../../assets/images/gallery/g13.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g14.jpg',
+    previewUrl: './../../assets/images/gallery/g14.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g15.jpg',
+    previewUrl: './../../assets/images/gallery/g15.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g16.jpg',
+    previewUrl: './../../assets/images/gallery/g16.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g17.jpg',
+    previewUrl: './../../assets/images/gallery/g17.jpg',
+  },
+  {
+    srcUrl: './../../assets/images/gallery/g18.jpg',
+    previewUrl: './../../assets/images/gallery/g18.jpg',
+  },
+
 ];

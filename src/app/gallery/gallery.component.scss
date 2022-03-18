@@ -6,13 +6,13 @@
   padding: 3rem 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
   > div {
     flex: 0 0 auto;
-    max-width: 200px;
-    margin: 0 20px;
-    border: 4px solid #eee;
+    max-width: 196px;
+    margin: 0 5px 5px;
+    padding: 3px;
+    background: linear-gradient(45deg, #09a8e3, #36d5c0);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
     img {
